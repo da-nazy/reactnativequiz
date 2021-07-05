@@ -6,12 +6,16 @@ import Quiz from "./screens/Quiz";
 import Welcome from "../App/screens/Welcome";
 import Register from "./screens/Register";
 import Login from "./screens/Login";
+import Score from "./screens/Score";
+import Translate from './screens/Translate';
 const Stack=createStackNavigator();
 export default function index(){
   return (
   
       <NavigationContainer >
       <Stack.Navigator>
+
+     
       <Stack.Screen
      name="Welcome"
      component={Welcome}
@@ -20,6 +24,30 @@ export default function index(){
      }}}
    
      />
+   <Stack.Screen
+     name="Translate"
+     component={Translate}
+     options={{headerShown:true,headerTitle:'Translate',headerLeft:null,
+     headerStyle:{
+       backgroundColor:'#7400b8'
+     },  headerTintColor: "#fff",
+     headerTitleStyle:{
+       alignSelf:'center',
+     },
+     }}/>
+     
+     <Stack.Screen
+     name="Score"
+     component={Score}
+     options={{headerShown:true,headerTitle:'Score',headerLeft:null,
+     headerStyle:{
+       backgroundColor:'#7400b8'
+     },  headerTintColor: "#fff",
+     headerTitleStyle:{
+       alignSelf:'center',
+     },
+     }}/>
+
       <Stack.Screen
      name="Register"
      component={Register}
